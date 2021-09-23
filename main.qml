@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Controls.Universal as Universal
 import QtQuick.Controls.Material as Material
+import "customcontrols"
 
 ApplicationWindow {
     width: 600
@@ -10,11 +11,15 @@ ApplicationWindow {
 
     Row {
         Universal.Button {
-            text: "Click me"
+            text: "Universal"
         }
 
         Material.Button {
-            text: "Click me"
+            text: "Material"
+        }
+
+        CustomButton {
+
         }
     }
 }
