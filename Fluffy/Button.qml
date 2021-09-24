@@ -1,8 +1,26 @@
 import QtQuick
-import QtQuick.Controls.Fusion as F
+import QtQuick.Templates as T
 
-F.Button {
+T.Button {
+    id: control
+
+    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                            implicitContentWidth + leftPadding + rightPadding)
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                             implicitContentHeight + topPadding + bottomPadding)
+
+    leftPadding: 10
+    rightPadding: 10
+    topPadding: 10
+    bottomPadding: 10
+
     background: Rectangle {
         color: "green"
+    }
+
+    contentItem: Text {
+        text: control.text
+        font: control.font
+        color: control.palette.buttonText
     }
 }

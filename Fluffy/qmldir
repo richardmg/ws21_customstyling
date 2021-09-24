@@ -1,2 +1,4 @@
 module Fluffy
-Button 1.0 Button.qml
+Button 5.15 Button.qml
+Button 6.0 Button.qml
+import QtQuick.Controls.Fusion auto
