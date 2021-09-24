@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>Fluffy/Button.qml</file>
+        <file>Fluffy/qmldir</file>
     </qresource>
 </RCC>

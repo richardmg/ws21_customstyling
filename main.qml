@@ -16,5 +16,9 @@ ApplicationWindow {
         Material.Button {
             text: "Click me"
         }
+
+        Button {
+            text: "Style button"
+        }
     }
 }
