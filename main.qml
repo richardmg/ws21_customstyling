@@ -1,20 +1,41 @@
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Controls.Universal as Universal
-import QtQuick.Controls.Material as Material
 
 ApplicationWindow {
     width: 600
     height: 400
     visible: true
 
-    Row {
-        Universal.Button {
-            text: "Click me"
-        }
+    Column {
+        anchors.centerIn: parent
+        spacing: 10
 
-        Material.Button {
-            text: "Click me"
+        SpinBox {
+            up.indicator: RoundedIndicator {
+                x: parent.width - width - 4
+                text: "+"
+            }
+            down.indicator: RoundedIndicator {
+                x: 4
+                text: "-"
+            }
+            leftInset: 30
+            rightInset: 30
         }
     }
+
+    component RoundedIndicator : Rectangle {
+        y: (parent.height - height) / 2
+        implicitWidth: 20
+        implicitHeight: 20
+        border.color: "green"
+        radius: 20
+        property string text
+
+        Text {
+            anchors.centerIn: parent
+            text: parent.text
+        }
+    }
+
 }
